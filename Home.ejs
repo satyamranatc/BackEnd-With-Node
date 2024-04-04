@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            font-size: 4vmax;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .Card
+        {
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 400px;
+        }
+        #Cards
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Hello By Ejs</h1>
+        <hr>
+
+       <div id="Cards">
+        <% for (let P of Data){ %>
+            <div class="Card">
+                <p><%= P.id %></p>
+                <p><%= P.name %></p>
+                <p><%= P.price %></p>
+                <p><%= P.description %></p>
+                <hr>
+    
+            </div>
+        <% } %>
+       </div>
+       
+    </center>
+    
+</body>
+</html>
